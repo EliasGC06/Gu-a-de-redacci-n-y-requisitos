@@ -1,24 +1,37 @@
-**Guía de redacción de requisitos**
+# Guía de redacción de requisitos
 
-**1. Cómo se nombra un requisito**
+## 1. Cómo se nombra un requisito
+
 Cada requisito tiene un identificador que nunca cambia y nunca se reutiliza. Si un requisito se elimina, su identificador queda muerto: no se le asigna a otro.
 
 Esa estabilidad no es burocracia. Es lo que permite escribir "el cambio afecta a RF-007 y RNF-SEG-002" sin repetir el texto completo, y es lo que va a hacer posible el análisis de impacto de la semana 15.
 
-Requisitos funcionales
-RF-###
-RF-001, RF-002, RF-003… Numeración consecutiva, sin agrupar por módulo.
+**Requisitos funcionales**
 
-Requisitos no funcionales
-RNF-<ATRIBUTO>-###
-Atributo de calidad	Clave	Ejemplo
-Rendimiento	REN	RNF-REN-001
-Seguridad	SEG	RNF-SEG-001
-Usabilidad	USA	RNF-USA-001
-Confiabilidad	CON	RNF-CON-001
-Mantenibilidad	MAN	RNF-MAN-001
-Escalabilidad	ESC	RNF-ESC-001
-2. Cómo se redacta un requisito funcional
+-RF-###
+
+-RF-001, RF-002, RF-003… Numeración consecutiva, sin agrupar por módulo.
+
+**Requisitos no funcionales**
+
+-RNF-<ATRIBUTO>-###
+
+-Atributo de calidad	Clave	Ejemplo
+
+-Rendimiento	REN	RNF-REN-001
+
+-Seguridad	SEG	RNF-SEG-001
+
+-Usabilidad	USA	RNF-USA-001
+
+-Confiabilidad	CON	RNF-CON-001
+
+-Mantenibilidad	MAN	RNF-MAN-001
+
+-Escalabilidad	ESC	RNF-ESC-001
+
+## 2. Cómo se redacta un requisito funcional
+
 El sistema <verbo firme> <objeto> <condición o restricción>
 Verbos firmes: registra, calcula, notifica, impide, genera, valida, muestra, envía, asigna.
 
@@ -28,7 +41,8 @@ Evitar: debería, podría, de preferencia, permite que el usuario pueda, tratar�
 
 ✕ El sistema debería tratar de evitar empalmes en la agenda.
 
-3. Cómo se redacta un requisito no funcional
+## 3. Cómo se redacta un requisito no funcional
+
 <Sujeto> <comportamiento esperado> <métrica o condición medible>
 Todo requisito no funcional necesita un número, un límite o una condición comprobable. Si no lo tiene, todavía no es un requisito: es una aspiración.
 
@@ -36,7 +50,8 @@ Todo requisito no funcional necesita un número, un límite o una condición com
 
 ✕ El sistema debe ser rápido al consultar el historial.
 
-4. Reglas que aplican a todos
+## 4. Reglas que aplican a todos
+
 Una sola idea por requisito. Si aparece una "y" que une dos comportamientos distintos, son dos requisitos.
 
 Describe qué debe pasar, no cómo implementarlo. La solución técnica se decide en la Unidad 3, no aquí.
@@ -47,7 +62,8 @@ Debe caber en el alcance definido en la Visión del producto. Si no cabe, va a u
 
 Dos personas distintas deben entenderlo igual. Si tu dupla lo interpretó de otra forma, el requisito está mal escrito. No es cuestión de quién tiene razón.
 
-5. Los campos de cada ficha
+## 5. Los campos de cada ficha
+
 Requisito funcional
 Campo	Qué va ahí
 Descripción	El requisito redactado con la fórmula del punto 2.
@@ -64,7 +80,9 @@ Origen	De dónde salió, incluyendo si se derivó del tipo de sistema.
 Prioridad	Imprescindible, importante o deseable.
 Por qué importa	Qué pasa si no se cumple. Es lo que justifica el límite elegido.
 Afecta a	Qué requisitos funcionales quedan condicionados por este.
-6. Sobre el campo Origen
+
+## 6. Sobre el campo Origen
+
 Es el campo más importante del curso y el que más se descuida.
 
 Sirve para distinguir tres cosas que se ven iguales en el documento pero no lo son:
@@ -76,7 +94,8 @@ Un requisito con origen "supuesto propio" no está mal por serlo. Está mal cuan
 
 Después de la entrevista de elicitación, revisa cuántos de tus supuestos sobrevivieron.
 
-7. Los seis defectos más comunes
+## 7. Los seis defectos más comunes
+
 Defecto	Cómo se ve	Cómo se arregla
 Adjetivo sin medida	"debe ser rápido"	Sustituir por un número
 Dos en uno	"seguro y fácil de usar"	Separar en dos requisitos
@@ -84,16 +103,27 @@ Solución disfrazada	"debe usar una base de datos en la nube"	Escribir la necesi
 Condicional vago	"debería, de preferencia"	Usar formulación firme
 Sin criterio	No se sabe cómo comprobarlo	Agregar criterio de aceptación
 Ambiguo	Dos lecturas posibles	Reescribir hasta que solo haya una
-8. Lista de verificación para revisar
+
+## 8. Lista de verificación para revisar
+
 Úsala para revisar tu propio documento y el de tu dupla.
 
 [ ] Todos los requisitos tienen identificador único y ninguno está repetido
+
 [ ] Cada requisito expresa una sola idea
+
 [ ] Cada requisito funcional tiene criterio de aceptación comprobable
+
 [ ] Cada requisito no funcional tiene una métrica, no solo un adjetivo
+
 [ ] El campo Origen distingue lo confirmado de lo supuesto
+
 [ ] Hay al menos un requisito no funcional por cada atributo de calidad que impone el tipo de sistema
+
 [ ] Ningún requisito impone una solución técnica
+
 [ ] Todos los requisitos caben dentro del alcance declarado
+
 [ ] No hay dos requisitos que se contradigan entre sí
+
 [ ] Ningún requisito se puede interpretar de dos maneras distintas
