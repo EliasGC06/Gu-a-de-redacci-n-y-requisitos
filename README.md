@@ -1,7 +1,6 @@
-Guía de redacción de requisitos
-Material de consulta · Ingeniería de Software I · SIS3407 Este documento no se entrega. Es la referencia para escribir los requisitos de tu proyecto y para revisar los de tu dupla. La plantilla que sí se llena y se entrega es especificacion-requisitos.md.
+**Guía de redacción de requisitos**
 
-1. Cómo se nombra un requisito
+**1. Cómo se nombra un requisito**
 Cada requisito tiene un identificador que nunca cambia y nunca se reutiliza. Si un requisito se elimina, su identificador queda muerto: no se le asigna a otro.
 
 Esa estabilidad no es burocracia. Es lo que permite escribir "el cambio afecta a RF-007 y RNF-SEG-002" sin repetir el texto completo, y es lo que va a hacer posible el análisis de impacto de la semana 15.
